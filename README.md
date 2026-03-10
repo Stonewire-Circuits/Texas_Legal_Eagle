@@ -1,16 +1,27 @@
-# Texas Legal Eagle: The Privacy-First AI Legal Node
-
 ## 🦅 Model Overview
-The **Texas Legal Eagle** is a localized Small Language Model (SLM) and custom DoRA (Weight-Decomposed Low-Rank Adaptation) dataset built by [Stonewire.co](https://stonewire.co). 
+The **Texas Legal Eagle** by [Stonewire.co](https://stonewire.co) is a privacy-first Small Language Model (SLM) engineered specifically for Texas law firms. 
 
-Deployed as a secure "Legal Node," it provides Texas law firms with hyper-accurate, on-premise AI legal research without exposing sensitive client data to public LLMs like ChatGPT or Claude.
+Every single step of this model's creation and deployment—from data collection to fine-tuning—was executed completely offline to guarantee zero data leakage, maximum security, and zero external bias.
 
-## 🔒 Access & Deployment (Closed Source)
-**This repository does not contain the model weights or the proprietary DoRA dataset.** Due to the sensitive nature of legal compliance and the commercial licensing of the Texas Legal Eagle, this model is exclusively deployed as an on-premise or private-cloud "Legal Node." 
+## 🔒 The "Zero-Internet" Pipeline
+We didn't just deploy locally; we *built* locally. 
 
-- **Data Sovereignty:** Zero internet connection required. Air-gapped capable.
-- **Training Data:** Exhaustively trained on Texas legal statutes, including the Texas Property Code, Texas Civil Practice and Remedies Code, and Texas Family Code.
-- **To request an enterprise deployment:** Visit [Stonewire Legal Nodes](https://stonewire.co/legal-nodes/texas-legal-eagle).
+* **Pure, Unbiased Data:** The foundational dataset was scraped directly from the official Texas statutes. No third-party editorializing, no hidden LLM biases—just the exact letter of the law.
+* **Air-Gapped Data Generation:** All instruction-response training pairs were generated entirely within a secure, local network leveraging local models like Gemma. Not a single byte of training data was ever sent to OpenAI, Anthropic, or the public internet.
 
-## 📊 Benchmark Goals
-The Texas Legal Eagle is specifically fine-tuned to eliminate hallucination in Texas civil and corporate law, outperforming generalized base models (like Llama 3) in localized legal accuracy.
+## ⚙️ Architecture & Commercial Safety
+* **Base Model:** Built on top of Microsoft's **Phi** architecture. 
+* **Why Phi?:** Selected for its extremely efficient parameter-to-performance ratio and its permissive **MIT License**, guaranteeing law firms the utmost privacy, flexibility, and commercial safety without vendor lock-in.
+* **The Engine:** A highly targeted, proprietary DoRA (Weight-Decomposed Low-Rank Adaptation) trained exclusively on Texas legal codes.
+
+## 💻 Consumer-Grade Hardware Deployment
+Secure AI shouldn't require a data center. Because the Texas Legal Eagle is a highly optimized SLM, it is tested and verified to run flawlessly on **consumer-grade hardware**. 
+
+* **Zero IT Bloat:** Completely eliminates the need for 5- or 6-figure enterprise server deployments.
+* **Plug and Play:** Runs natively on a firm's existing high-end workstations or a single, affordable local machine.
+* **Cost Certainty:** Flat-rate deployment with absolutely zero recurring API token costs.
+
+## 🛑 Access (Closed Source)
+**This repository does not contain the model weights or the proprietary DoRA dataset.** Due to the strict privacy requirements of legal compliance, this model is exclusively deployed as an on-premise "Legal Node." 
+
+To request a secure deployment for your firm, visit [Stonewire Legal Nodes](https://stonewire.co/legal-nodes/texas-legal-eagle).
